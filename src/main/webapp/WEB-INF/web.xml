@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    version="4.0"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <context-param>
+  <param-name>stud_id</param-name>
+  <param-value>101</param-value>
+  </context-param>
+  
+  
+  
+  <context-param>
+  <param-name>stud_name</param-name>
+  <param-value>Virat</param-value>
+  </context-param>
+  
+  
+  
+  <context-param>
+  <param-name>stud_perc</param-name>
+  <param-value>99</param-value>
+  </context-param>
+  
+  
+  
+  <!-- Registering the servlet -->
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>generic_servlet.FirstServlet</servlet-class>
+    </servlet>
+
+    <!-- Mapping URL to the servlet -->
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    
+    <!-- EmployeeSErvlet registering & mapping -->
+  <servlet>
+  <servlet-name>EmployeeServlet</servlet-name>
+        <servlet-class>generic_servlet.EmployeeServlet</servlet-class>
+  
+  </servlet>
+  
+  <servlet-mapping>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <url-pattern>/emp</url-pattern>
+    </servlet-mapping>
+    
+  
+  <!-- CalciServlet registering & Mapping -->
+  
+  <servlet>
+  <servlet-name>CalciServlet</servlet-name>
+        <servlet-class>calculator.CalciServlet</servlet-class>
+  
+  </servlet>
+  
+  <servlet-mapping>
+        <servlet-name>CalciServlet</servlet-name>
+        <url-pattern>/calci</url-pattern>
+    </servlet-mapping>
+    
+  
+  <welcome-file-list>
+  <welcome-file>home.html</welcome-file> 
+  
+  
+  </welcome-file-list>
+  
+  
+</web-app>
